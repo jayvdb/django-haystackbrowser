@@ -103,6 +103,7 @@ setup(
         # So, we put this last, to ensure that it pegs the maximum version
         # where packages with looser requirements may say otherwise.
         'django-haystack>=1.2.0',
+        'elasticsearch',
         'json2html>=1.0.1'
     ],
     tests_require=[
