@@ -4,7 +4,10 @@ import logging
 try:
     from urllib import quote_plus
 except ImportError:  # > Python 3
-    from django.utils.six.moves.urllib import parse
+    try:
+        from django.utils.six.moves.urllib import parse
+    except ImportError:
+        from six.moves.urllib import parse
 
     quote_plus = parse.quote_plus
 from operator import itemgetter
